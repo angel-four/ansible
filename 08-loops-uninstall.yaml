@@ -1,0 +1,11 @@
+- name: loops 
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: loops for unstall and install
+    ansible.builtin.package:
+      name: "{{item}}"
+      state: present
+    loop:
+    - {name: 'git', state: 'present'}
+    - {name: 'nginx', state: absent}
