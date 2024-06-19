@@ -1,0 +1,10 @@
+- name: multi plays
+  hosts: local host
+  become: yes
+  tasks:
+  - name: play1 and task1
+    ansible.builtin.debug:
+      msg: "hai this is task one"
+  - name: play2 and task 2
+    ansible.builtin.debug:
+      msg: "hai this is task two"
