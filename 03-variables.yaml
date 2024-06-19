@@ -1,0 +1,13 @@
+- name: playbook for variables
+  hosts: local host
+  become: yes
+  vars:
+    course: "aws"
+    duration: "110hrs"
+    trainer: "shiva"
+    timings: "8am"
+  tasks:
+  - name: checking variables
+    ansible.builtin.package:
+      msg: "hai, i am learning {{course}}, duration is {{duration}}, trainer is {{trainer}}, timings{{timings}}"
+      
