@@ -2,15 +2,15 @@
   hosts: local host
   become: yes
   vars:
-    course: aws
-    duration: 110hrs
-    timings: 8am
-    trainer: shiva
+    course: "aws"
+    duration: "110hrs"
+    timings: "8am"
+    trainer: "shiva"
   tasks:
   - name: checking task level variables
     vars: 
-      course: aws with devops
-      duration: 120hrs
+      course: "aws with devops"
+      duration: "120hrs"
     ansible.builtin.package:
       msg: "hai, i am learing {{course}}, duration is {{duration}}, timings are {{timings}}"
     
